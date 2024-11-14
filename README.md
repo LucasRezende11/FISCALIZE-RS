@@ -18,8 +18,11 @@ More information about the sources of information or the concepts that balizaram
 ## Folder structure of the project:
 project/
 │
+
 ├── pages/
+
 │   ├── fiscalize_rs.py
+
 │   ├── indicadores_de_receita_municipal.py
 │   ├── indicadores_economicos.py
 │   ├── indicadores_de_saude.py
