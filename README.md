@@ -35,16 +35,16 @@ project/
 ├── logo.png
 └── logo3.png
 
-### 'pages'
+### pages
 This folder contains all the code that constructs the pages within the app.
 
-- **`fiscalize_rs.py`**
+- **fiscalize_rs.py**
   This is the "About" page, which provides an overview of the tool and allows users to send messages with suggestions or questions.
 
-- **`Indicadores_de_Receita_Municipal.py`**
+- **Indicadores_de_Receita_Municipal.py**
   This page displays information about municipal revenue, including the various revenue categories, and provides analysis on the municipality's dependence on other state-level entities.
 
-- **`Indicadores_Econômicos.py`**
+- **Indicadores_Econômicos.py**
   This page provides information on economic indicators, such as GDP (PIB), past mayors of the city, population statistics, and the distribution of economic sectors.
 
 - **`Indicadores_de_Saúde.py`**
