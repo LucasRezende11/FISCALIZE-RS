@@ -15,32 +15,6 @@ Another important data source was the website of the Tribunal de Contas do Estad
 The IBGE CIDADES platform, an IBGE tool for accessing their data, was also used to gather information on the Índice de Desenvolvimento da Educação Básica (IDEB) and mortality rates.
 More information about the sources of information or the concepts that balizaram the construction of this tool is avaible in the references page in the app (Referências).
 
-## Folder structure of the project:
-project/
-│
-
-├── pages/
-
-│   ├── fiscalize_rs.py
-
-│   ├── indicadores_de_receita_municipal.py
-
-│   ├── indicadores_economicos.py
-
-│   ├── indicadores_de_saude.py
-
-│   ├── indicadores_de_educacao.py
-│   ├── indicadores_de_gestao_fiscal.py
-│   ├── indicadores_de_saneamento.py
-│   └── referencias.py
-│
-├── data_tables/
-│
-├── project.py
-├── test_project.py
-├── logo.png
-└── logo3.png
-
 ### pages
 This folder contains all the code that constructs the pages within the app.
 
