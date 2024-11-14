@@ -2,7 +2,7 @@
 
 ## Video Demo:  <URL HERE>
 
-## Description:
+## Description
 The FISCALIZE RS is an initiative aimed at democratizing access to municipal management information and strives to provide an overview of municipalities, allowing individuals to actively exercise their citizenship and oversee whether the municipalities are fulfilling their basic and constitutional duties. Through the tool, users can access socioeconomic information, municipal public accounts, and indicators of key sectors such as health and education.
 Furthermore, it seeks to highlight the importance of proper management of public resources and investments in health, education, and sanitation, with the goal of promoting comprehensive development.
 
