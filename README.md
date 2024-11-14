@@ -24,8 +24,11 @@ project/
 │   ├── fiscalize_rs.py
 
 │   ├── indicadores_de_receita_municipal.py
+
 │   ├── indicadores_economicos.py
+
 │   ├── indicadores_de_saude.py
+
 │   ├── indicadores_de_educacao.py
 │   ├── indicadores_de_gestao_fiscal.py
 │   ├── indicadores_de_saneamento.py
