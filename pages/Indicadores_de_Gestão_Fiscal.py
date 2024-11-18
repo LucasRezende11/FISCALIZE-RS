@@ -3,8 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from utils import get_city, cities_df, net_consolidated_debt, personnel_expenses, remains_to_be_paid, credit_operations, page_title
-from project import election_years
+from utils import get_city, cities_df, net_consolidated_debt, personnel_expenses, remains_to_be_paid, credit_operations, page_title, election_years
 
 years = list(range(2000, 2041))
 
