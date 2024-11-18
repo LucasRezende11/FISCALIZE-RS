@@ -119,3 +119,11 @@ def page_title(name):
             <h1 style="font-size: 50px; margin: 0;"><strong>{name}</strong></h1>
         </div>
         """, unsafe_allow_html=True)
+
+
+# --- election years function ---
+def election_years(year):
+    if (year - 2020) % 4 == 0:
+        return False  
+    else:
+        return True 
