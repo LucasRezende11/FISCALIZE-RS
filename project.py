@@ -93,6 +93,13 @@ def get_sidra_data(table_code, variables, territorial_level, ibge_territorial_co
     return dfs
 
 
+# --- election years function ---
+def election_years(year):
+    if (year - 2020) % 4 == 0:
+        return False  
+    else:
+        return True 
+
 if __name__ == "__main__":
     main()
 
