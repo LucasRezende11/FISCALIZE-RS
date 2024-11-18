@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import locale
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
 
 from utils import get_city, cities_df, water_sewer_solidwaste_df, page_title, create_tooltip
 
