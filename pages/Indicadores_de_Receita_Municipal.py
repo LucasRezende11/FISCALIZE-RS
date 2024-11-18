@@ -1,8 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
-import locale
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
 
 from utils import get_city, get_year, cities_df, revenue_data, page_title
 
@@ -73,11 +72,12 @@ def municipal_revenues():
                 frustracao = "Sim"
                 diferenca = receita_prevista - total_revenue
 
-            receita_prevista_formatada = f"R$ {locale.format_string('%.2f', round((receita_prevista / 1_000_000), 2), grouping=True)} milhões"
-            receita_arrecadada_formatada = f"R$ {locale.format_string('%.2f', round((total_revenue / 1_000_000), 2), grouping=True)} milhões"
-            receita_impostos_formatada = f"R$ {locale.format_string('%.2f', round((receita_impostos / 1_000_000), 2), grouping=True)} milhões"
-            receita_transferencias_formatada = f"R$ {locale.format_string('%.2f', round((receita_transferencias / 1_000_000), 2), grouping=True)} milhões"
-            diferenca_formatada = f"R$ {locale.format_string('%.2f', round((diferenca / 1_000_000), 2), grouping=True)} milhões"
+            receita_prevista_formatada = f"R$ {format(round((receita_prevista / 1_000_000), 2), ',.2f').replace(',', 'X').replace('.', ',').replace('X', '.')} milhões"
+            receita_arrecadada_formatada = f"R$ {format(round((total_revenue / 1_000_000), 2), ',.2f').replace(',', 'X').replace('.', ',').replace('X', '.')} milhões"
+            receita_impostos_formatada = f"R$ {format(round((receita_impostos / 1_000_000), 2), ',.2f').replace(',', 'X').replace('.', ',').replace('X', '.')} milhões"
+            receita_transferencias_formatada = f"R$ {format(round((receita_transferencias / 1_000_000), 2), ',.2f').replace(',', 'X').replace('.', ',').replace('X', '.')} milhões"
+            diferenca_formatada = f"R$ {format(round((diferenca / 1_000_000), 2), ',.2f').replace(',', 'X').replace('.', ',').replace('X', '.')} milhões"
+
 
             col1, col2, col3 = st.columns(3)
 
