@@ -153,7 +153,7 @@ def economic_indicators():
         loading_message.empty()
 
         GDP_value = dfs_gdp_city['city_gdp_data_37'].loc[dfs_gdp_city['city_gdp_data_37']['Ano'] == str(year), 'Valor'].values[0]
-        GDP_value = f"R$ {locale.format_string('%.2f', round((GDP_value / 1000000), 2), grouping=True)} milhões"
+        GDP_value = f"R$ {round((GDP_value / 1_000_000), 2):,.2f} milhões"
         ratio_state_gdp = dfs_gdp_city2['city_gdp_data2_497'].loc[dfs_gdp_city2['city_gdp_data2_497']['Ano'] == str(year), 'Valor'].values[0]
 
         st.markdown(
