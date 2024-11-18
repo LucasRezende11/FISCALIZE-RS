@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import numpy as np
-import locale
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
 
 from utils import get_city, cities_df, asps_index_df, create_tooltip, imunization_bcg, imunization_polio, health_data, mortality_data, page_title
 from project import format_city_name
