@@ -4,8 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import openpyxl
-import locale
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
 
 from utils import get_city, get_year, cities_df, water_sewer_solidwaste_df, page_title, prefeitos_data
 from project import get_sidra_data, normalize, format_city_name
