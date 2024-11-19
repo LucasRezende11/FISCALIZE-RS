@@ -81,7 +81,7 @@ def references():
 
         <p style="font-size:17px;text-align: justify;">
         <strong>-Portal do TCE-RS (dados de investimento em educação e índice MDE):</strong> https://portal.tce.rs.gov.br/aplicprod/f?p=20001:23:::NO:::<br>
-        <strong>-Portal CIDADES - IBGE (dados do Índice de Desenvolviemnto da Educação Básica - IDEB):</strong> https://cidades.ibge.gov.br/brasil/rs/pesquisa/40/30277
+        <strong>-Portal CIDADES - IBGE (dados do Índice de Desenvolviemnto da Educação Básica - IDEB):</strong> https://cidades.ibge.gov.br/brasil/rs/pesquisa/40/30277<br>
         <strong>-Artigo 212 da Constituição Federal de 1988 (estabelece o investimento mínimo em Manutenção e Desenvolvimento da Educação - MDE):</strong> https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirBase=CF&abrirArtigo=212<br>
         <strong>-INEP (conceituação do índice IDEB):</strong> https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/ideb
         </p>
