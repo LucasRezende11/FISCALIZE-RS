@@ -136,6 +136,7 @@ def economic_indicators():
 
         city = city.title()
 
+        city = format_city_name(city)
         fig.update_layout(barmode='stack', title=dict(text=f'Prefeitos de {city} ao Longo dos Anos', font=dict(size=20)), xaxis_title="Ano da Eleição", showlegend=False, xaxis=dict(tickmode='array', tickvals=df_cidade['Ano']),
         yaxis=dict(showticklabels=False,showgrid=False, range=[0, 1]), height=200, margin=dict(l=10, r=10, t=40, b=20), dragmode=False )
 
