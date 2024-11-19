@@ -42,7 +42,7 @@ def education_indicators():
             col1, col2 = st.columns([30, 1])
 
             with col1:
-                city = city.title()
+                city = format_city_name(city)
                 st.markdown(f"""
                     <div style='text-align: center; font-size: 22px; margin-top: 10px; margin-bottom: 10px'>
                         Índice MDE de {city}: <strong>{mde_value:.2f}</strong>
