@@ -92,7 +92,7 @@ def education_indicators():
         fig = px.line(education_data_city, x='Ano', y='Gasto total com educação', title=f"Evolução do Gasto Total com Educação",
                           labels={'Gasto total com educação': f'Gasto com educação (R$)', 'Ano': 'Ano'},markers=True, color_discrete_sequence=['#191e2c'])
         
-        city = city.title()
+        city = format_city_name(city)
         fig.update_layout(title=dict(text=f"Evolução do Gasto Total com Educação - {city}", font=dict(size=20)),
                 yaxis=dict(range=[0, max_gasto], title=f'Gasto com educação (R$)', titlefont=dict(size=14)),xaxis_title=None,
                 dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
