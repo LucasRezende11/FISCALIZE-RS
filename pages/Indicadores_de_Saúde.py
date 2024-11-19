@@ -42,6 +42,7 @@ def health_indicators():
             col1, col2 = st.columns([30, 1])
 
             with col1:
+                city = format_city_name(city)
                 st.markdown(
                     f"""
                     <div style='text-align: center; font-size: 22px; margin-top: 10px;margin-bottom: 10px'>
@@ -70,7 +71,7 @@ def health_indicators():
         fig = px.line( health_data_city, x='Ano', y='Gasto total com saúde', title=f"Evolução do Gasto Total com Saúde",
                       labels={'Gasto Total Saúde': 'Gasto com Saúde (R$)', 'Ano': 'Ano'}, markers=True, color_discrete_sequence=['#191e2c'])
 
-        city = city.title()
+        city = format_city_name(city)
         fig.update_layout(title=dict(text=f"Evolução do Gasto Total com Saúde - {city}", font=dict(size=20)),
             yaxis=dict(range=[0, max_health], title='Gasto com Saúde (R$)', titlefont=dict(size=14)),
             xaxis_title=None,xaxis_title_font=dict(size=14),yaxis_title='Gasto com Saúde (R$)',
