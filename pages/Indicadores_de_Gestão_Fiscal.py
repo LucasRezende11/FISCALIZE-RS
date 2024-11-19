@@ -231,7 +231,7 @@ def fiscal_management_indicators():
                         rcl_values = rcl_data_city.iloc[:, 2]
 
                         fig_credit_evolution = px.line(x=credit_years, y=credit_values, title=f"Evolução das Operações de Crédito - {city}",
-                            labels={'x': 'Ano', 'y': 'Operações de Crédito (R$)'}, markers=True)
+                            labels={'x': 'Ano', 'y': 'Operações de Crédito (R$)'}, markers=True, color_discrete_sequence=['#191e2c'])
 
                         max_credit = max(credit_values)*1.15
 
