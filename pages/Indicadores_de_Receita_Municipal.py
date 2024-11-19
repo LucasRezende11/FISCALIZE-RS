@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 
 
 from utils import get_city, get_year, cities_df, revenue_data, page_title
+from project import format_city_name
 
 ### --- aba de receitas municipais  --- ###
 st.set_page_config(page_icon= "logo3.png",layout="wide")
