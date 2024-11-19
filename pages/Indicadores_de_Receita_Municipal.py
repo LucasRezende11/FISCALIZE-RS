@@ -143,18 +143,18 @@ def municipal_revenues():
         max_transferencias = revenue_city_all_years['Receita de transferências'].max()*1.15
 
         with col6:
-            fig2 = px.line(revenue_city_all_years, x='Ano', y='Receita de impostos e taxas',  title=f"Evolução da Receita de Impostos e Taxas - {city}",
+            fig2 = px.line(revenue_city_all_years, x='Ano', y='Receita de impostos e taxas',  title=f"Receita de Impostos e Taxas - {city}",
                         labels={'Receita de impostos e taxas': 'Receita (R$)', 'Ano': 'Ano'},  markers=True, color_discrete_sequence=['#191e2c'])
 
-            fig2.update_layout(title=dict(text=f"Evolução da Receita de Impostos e Taxas - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_impostos], title='Receita (R$)', titlefont=dict(size=14)),
+            fig2.update_layout(title=dict(text=f"Receita de Impostos e Taxas - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_impostos], title='Receita (R$)', titlefont=dict(size=14)),
             xaxis_title= None, xaxis_title_font=dict(size=14),legend=dict(font=dict(size=12), title=None),dragmode=False, margin=dict(l=10, r=10, t=40, b=5))
             st.plotly_chart(fig2, config={'scrollZoom': False, 'displayModeBar': False})
 
         with col7:
-            fig3 = px.line(revenue_city_all_years, x='Ano', y='Receita de transferências', title=f"Evolução da Receita de transferências - {city}",
+            fig3 = px.line(revenue_city_all_years, x='Ano', y='Receita de transferências', title=f"Receita de transferências - {city}",
                         labels={'Receita de transferências': 'Receita (R$)', 'Ano': 'Ano'}, markers=True, color_discrete_sequence=['#ec8900'])
 
-            fig3.update_layout(title=dict(text=f"Evolução da Receita de Transferências - {city}", font=dict(size=20)),yaxis=dict(range=[0, max_transferencias], title='Receita (R$)', titlefont=dict(size=14)),
+            fig3.update_layout(title=dict(text=f"Receita de Transferências - {city}", font=dict(size=20)),yaxis=dict(range=[0, max_transferencias], title='Receita (R$)', titlefont=dict(size=14)),
             xaxis_title= None, xaxis_title_font=dict(size=14),legend=dict(font=dict(size=12), title=None),dragmode=False, margin=dict(l=10, r=10, t=40, b=5))
             st.plotly_chart(fig3, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
