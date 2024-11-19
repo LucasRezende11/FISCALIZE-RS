@@ -103,6 +103,7 @@ def municipal_revenues():
 
         max_revenue_value = revenue_city_all_years[['Receita Prevista', 'Receita Arrecadada']].max().max() * 1.15
 
+        city = format_city_name(city)
         fig.update_layout(title=dict(text=f"Evolução da Receita Prevista e Arrecadada - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_revenue_value], title='Receita (R$)', titlefont=dict(size=14)),
         xaxis_title= None, xaxis_title_font=dict(size=14), yaxis_title='Receita (R$)', dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2,x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
 
