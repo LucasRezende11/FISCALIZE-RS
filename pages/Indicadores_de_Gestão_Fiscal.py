@@ -4,6 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from utils import get_city, cities_df, net_consolidated_debt, personnel_expenses, remains_to_be_paid, credit_operations, page_title, election_years
+from project import format_city_name
 
 years = list(range(2000, 2041))
 
