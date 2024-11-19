@@ -64,6 +64,7 @@ def fiscal_management_indicators():
 
                 fig_debt = px.line(x=rcl_years, y=debt_values,title=f"Evolução da Dívida Consolidada Líquida - {city}", labels={'x': 'Ano', 'y': 'Dívida Consolidada Líquida (R$)'}, markers=True, color_discrete_sequence=['#191e2c'])
 
+                city = format_city_name(city)
                 fig_debt.update_layout(title=dict(text=f"Evolução da Dívida Consolidada Líquida - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_rcl], title='Dívida Consolidada Líquida (R$)', titlefont=dict(size=14)),
                 xaxis_title=None, xaxis=dict(type='category', titlefont=dict(size=14)), dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=12)),
                 margin=dict(l=10, r=10, t=40, b=5))
