@@ -132,7 +132,7 @@ def fiscal_management_indicators():
                     personal_expenses_values = personnel_expenses_city.iloc[:, 4]
 
                     fig_personal_expenses = px.line(x=expenses_years, y=personal_expenses_values, title=f"Evolução das Despesas com Pessoal - {city}",
-                        labels={'x': 'Ano', 'y': 'Despesas com Pessoal (R$)'}, markers=True)
+                        labels={'x': 'Ano', 'y': 'Despesas com Pessoal (R$)'}, markers=True, color_discrete_sequence=['#191e2c'])
 
                     max_personnel = max(personal_expenses_values)*1.15
 
