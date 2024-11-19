@@ -191,7 +191,7 @@ def education_indicators():
 
         fig_mde.add_hline(y=25, line=dict(color='red', dash='dash', width=2), annotation_text="Mínimo 25%", annotation_position="bottom right")
 
-        fig_mde.update_layout(title=dict(text=f"Índice MDE - {city.title()} vs média dos municípios do RS", font=dict(size=20)), yaxis=dict(range=[0, max_mde], title='Índice MDE (%)', titlefont=dict(size=14)),
+        fig_mde.update_layout(title=dict(text=f"Índice MDE - {format_city_name(city)} vs média dos municípios do RS", font=dict(size=20)), yaxis=dict(range=[0, max_mde], title='Índice MDE (%)', titlefont=dict(size=14)),
             xaxis_title=None, xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
 
