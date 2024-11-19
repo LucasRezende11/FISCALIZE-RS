@@ -197,7 +197,7 @@ def health_indicators():
 
         max_asps = asps_plot_data[['Média do índice ASPS dos municípios do RS', f'Índice ASPS {city.title()}']].max().max() * 1.15
 
-        fig_asps = px.line(asps_plot_data, x='Ano', y=[f'Índice ASPS {format_city_name(city)}', 'Média do índice ASPS dos municípios do RS'],
+        fig_asps = px.line(asps_plot_data, x='Ano', y=[f'Índice ASPS {city.title()}', 'Média do índice ASPS dos municípios do RS'],
                         hover_data={'variable': False}, title=f"Evolução do Índice ASPS - {municipio_selecionado} vs média dos municípios do RS",
                         labels={'value': 'Índice ASPS', 'Ano': 'Ano'}, markers=True, color_discrete_map={f'Índice ASPS {city.title()}': '#ec8900', 'Média do índice ASPS dos municípios do RS': '#191e2c'})
 
