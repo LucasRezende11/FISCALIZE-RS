@@ -83,7 +83,7 @@ def health_indicators():
         st.markdown(
             """
             <div style="background-color: #DDDDDD; padding: 2px; border-radius: 5px;margin-bottom: 10px">
-                <h2 style="text-align: center; margin-top: 0; font-size: 30px; color: #333;"><strong>Investimento destinado à Saúde Básica</strong></h2>
+                <h2 style="text-align: center; margin-top: 0; font-size: 30px; color: #333;"><strong>Investimento destinado à Atenção Básica</strong></h2>
             </div>
             """,
             unsafe_allow_html=True)
@@ -91,10 +91,10 @@ def health_indicators():
         health_data_city['Participação Saúde Básica'] = (health_data_city['Gasto com saúde básica'] / health_data_city['Gasto total com saúde']) * 100
         max_participation = health_data_city['Participação Saúde Básica'].max() * 1.3
 
-        fig = px.bar(health_data_city, x='Ano', y='Participação Saúde Básica', title=f"Participação do Gasto com Saúde Básica no Total de Saúde - {city}",
+        fig = px.bar(health_data_city, x='Ano', y='Participação Saúde Básica', title=f"Participação do Gasto com Atenção Básica no Total de Saúde - {city}",
             labels={'Participação Saúde Básica': 'Participação (%)', 'Ano': 'Ano'}, color_discrete_sequence=['#394555'])
 
-        fig.update_layout(title=dict(text=f"Participação do Gasto com Saúde Básica no Total de Saúde", font=dict(size=20)),
+        fig.update_layout(title=dict(text=f"Participação do Gasto com Atenção Básica no Total de Saúde", font=dict(size=20)),
             yaxis=dict(range=[0, max_participation], title='Participação (%)', titlefont=dict(size=14)), xaxis_title=None,
             xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
