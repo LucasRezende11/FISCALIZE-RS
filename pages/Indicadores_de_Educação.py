@@ -110,7 +110,7 @@ def education_indicators():
         education_data_city['Participação Educação fundamental'] = (education_data_city['Gasto com educação fundamental'] / education_data_city['Gasto total com educação']) * 100
         max_participation = education_data_city['Participação Educação fundamental'].max() * 1.3
 
-        fig = px.bar(education_data_city,x='Ano',y='Participação Educação fundamental',title=f"Participação do Gasto com Educação fundamental no Total de Educação - {city}",
+        fig = px.bar(education_data_city,x='Ano',y='Participação Educação fundamental',title=f"Participação do Gasto com Educação Fundamental no Total de Educação - {city}",
             labels={'Participação Educação fundamental': 'Participação (%)', 'Ano': 'Ano'}, color_discrete_sequence=['#394555'])
 
         fig.update_layout(title=dict(text="Participação do Gasto com Educação fundamental no Total de Educação", font=dict(size=20)),
