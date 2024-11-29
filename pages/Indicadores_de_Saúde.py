@@ -89,7 +89,7 @@ def health_indicators():
             unsafe_allow_html=True)
 
         health_data_city['Participação Saúde Básica'] = (health_data_city['Gasto com saúde básica'] / health_data_city['Gasto total com saúde']) * 100
-        max_participation = health_data_city['Participação Saúde Básica'].max() * 1.3
+        max_participation = health_data_city['Participação Saúde Básica'].max() * 1.05
 
         fig = px.bar(health_data_city, x='Ano', y='Participação Saúde Básica', title=f"Participação do Gasto com Atenção Básica no Total de Saúde - {city}",
             labels={'Participação Saúde Básica': 'Participação (%)', 'Ano': 'Ano'}, color_discrete_sequence=['#394555'])
