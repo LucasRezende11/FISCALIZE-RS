@@ -218,7 +218,7 @@ def municipal_revenues():
                         y=revenue_city_all_years['Percentual Impostos e Taxas'],
                         name='Impostos e Taxas',
                         marker_color='#191e2c',
-                        text=revenue_city_all_years['Percentual Impostos e Taxas'].astype(str) + '%',
+                        text=revenue_city_all_years['Percentual Impostos e Taxas'].round(2).astype(str) + '%',
                         textposition='inside',
                         hovertemplate='Impostos e Taxas: %{y}%<extra></extra>'))
                 elif sector == 'Transferências da União':
@@ -226,7 +226,7 @@ def municipal_revenues():
                         y=revenue_city_all_years['Percentual Transferências União'],
                         name='Transferências da União',
                         marker_color='#394555',
-                        text=revenue_city_all_years['Percentual Transferências União'].astype(str) + '%',
+                        text=revenue_city_all_years['Percentual Transferências União'].round(2).astype(str) + '%',
                         textposition='inside',
                         hovertemplate='Transferências da União: %{y}%<extra></extra>'))
                 elif sector == 'Transferências Estaduais':
@@ -234,7 +234,7 @@ def municipal_revenues():
                         y=revenue_city_all_years['Percentual Transferências Estado'],
                         name='Transferências Estaduais',
                         marker_color='#647081',
-                        text=revenue_city_all_years['Percentual Transferências Estado'].astype(str) + '%',
+                        text=revenue_city_all_years['Percentual Transferências Estado'].round(2).astype(str) + '%',
                         textposition='inside',
                         hovertemplate='Transferências Estaduais: %{y}%<extra></extra>'))
                 elif sector == 'Outros':
@@ -242,7 +242,7 @@ def municipal_revenues():
                         y=revenue_city_all_years['Percentual Outros'],
                         name='Outros',
                         marker_color='#ec8900',
-                        text=revenue_city_all_years['Percentual Outros'].astype(str) + '%',
+                        text=revenue_city_all_years['Percentual Outros'].round(2).astype(str) + '%',
                         textposition='inside',
                         hovertemplate='Outros: %{y}%<extra></extra>'))
 
