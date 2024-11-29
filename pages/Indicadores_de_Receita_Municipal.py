@@ -185,7 +185,7 @@ def municipal_revenues():
                 </div>
             """, unsafe_allow_html=True)
 ###################################################################################################################################
-        max_y_value = max(transferencias_federais.max(), transferencias_estaduais.max())*1.15
+        max_y_value = (transferencias_federais.max() + transferencias_estaduais.max())*1.15
 
         fig4 = go.Figure()
         fig4.add_trace(go.Bar(x=transferencias_federais.index, y=transferencias_federais, name='Transferências da União e de suas Entidades', marker_color='#191e2c'))
