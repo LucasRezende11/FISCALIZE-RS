@@ -220,7 +220,7 @@ def municipal_revenues():
                         marker_color='#191e2c',
                         text=revenue_city_all_years['Percentual Impostos e Taxas'].round(2).astype(str) + '%',
                         textposition='inside',
-                        hovertemplate='Impostos e Taxas: %{y}%<extra></extra>'))
+                        hovertemplate='Impostos e Taxas: %{y:.2f}%<extra></extra>'))
                 elif sector == 'Transferências da União':
                     fig5.add_trace(go.Bar(x=revenue_city_all_years['Ano'],
                         y=revenue_city_all_years['Percentual Transferências União'],
@@ -228,7 +228,7 @@ def municipal_revenues():
                         marker_color='#394555',
                         text=revenue_city_all_years['Percentual Transferências União'].round(2).astype(str) + '%',
                         textposition='inside',
-                        hovertemplate='Transferências da União: %{y}%<extra></extra>'))
+                        hovertemplate='Transferências da União: %{y:.2f}%<extra></extra>'))
                 elif sector == 'Transferências Estaduais':
                     fig5.add_trace(go.Bar(x=revenue_city_all_years['Ano'],
                         y=revenue_city_all_years['Percentual Transferências Estado'],
@@ -236,7 +236,7 @@ def municipal_revenues():
                         marker_color='#647081',
                         text=revenue_city_all_years['Percentual Transferências Estado'].round(2).astype(str) + '%',
                         textposition='inside',
-                        hovertemplate='Transferências Estaduais: %{y}%<extra></extra>'))
+                        hovertemplate='Transferências Estaduais: %{y:.2f}%<extra></extra>'))
                 elif sector == 'Outros':
                     fig5.add_trace(go.Bar(x=revenue_city_all_years['Ano'],
                         y=revenue_city_all_years['Percentual Outros'],
@@ -244,7 +244,7 @@ def municipal_revenues():
                         marker_color='#ec8900',
                         text=revenue_city_all_years['Percentual Outros'].round(2).astype(str) + '%',
                         textposition='inside',
-                        hovertemplate='Outros: %{y}%<extra></extra>'))
+                        hovertemplate='Outros: %{y:.2f}%<extra></extra>'))
 
             fig5.update_layout(barmode='stack', title=dict(text=f"Composição Percentual da Receita Arrecadada - {city}", font=dict(size=20)),
                 xaxis_title=None, yaxis_title='Percentual (%)', yaxis=dict(range=[0, 100], title_font=dict(size=14)),
