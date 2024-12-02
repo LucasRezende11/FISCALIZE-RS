@@ -111,13 +111,13 @@ def education_indicators():
         max_participation = education_data_city['Participação Educação fundamental'].max() * 1.05
 
         fig = px.bar(education_data_city,x='Ano',y='Participação Educação fundamental',title=f"Participação do Gasto com Educação Fundamental no Total de Educação - {city}",
-            labels={'Participação Educação fundamental': 'Participação (%)', 'Ano': 'Ano'}, color_discrete_sequence=['#394555'])
+            labels={'Participação Educação fundamental': 'Participação (%)', 'Ano': 'Ano'}, color_discrete_sequence=['#394555'], text='Participação Educação fundamental')
 
         fig.update_layout(title=dict(text="Participação do Gasto com Educação Fundamental no Total de Educação", font=dict(size=20)),
             yaxis=dict(range=[0, max_participation], title='Participação (%)', titlefont=dict(size=14)),xaxis_title=None,
             dragmode=False,legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
-
+        fig.update_traces(texttemplate='%{text:.2f}%', textposition='outside')
         st.plotly_chart(fig, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
         st.markdown(
