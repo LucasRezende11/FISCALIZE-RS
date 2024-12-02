@@ -92,13 +92,13 @@ def health_indicators():
         max_participation = health_data_city['Participação Saúde Básica'].max() * 1.05
 
         fig = px.bar(health_data_city, x='Ano', y='Participação Saúde Básica', title=f"Participação do Gasto com Atenção Básica no Total de Saúde - {city}",
-            labels={'Participação Saúde Básica': 'Participação (%)', 'Ano': 'Ano'}, color_discrete_sequence=['#394555'])
+            labels={'Participação Saúde Básica': 'Participação (%)', 'Ano': 'Ano'}, color_discrete_sequence=['#394555'], text='Participação Saúde Básica')
 
         fig.update_layout(title=dict(text=f"Participação do Gasto com Atenção Básica no Total de Saúde", font=dict(size=20)),
             yaxis=dict(range=[0, max_participation], title='Participação (%)', titlefont=dict(size=14)), xaxis_title=None,
             xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
-
+        fig.update_traces(texttemplate='%{text:.2f}%', textposition='outside')
         st.plotly_chart(fig, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
         st.markdown(
