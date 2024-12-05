@@ -43,17 +43,15 @@ prefeitos_data = pd.read_excel('data_tables/prefeitos_rs.xlsx')
 def get_city(cities_df):
     if "city" not in st.session_state:
         st.session_state.city = ""
-    typed_city  = st.sidebar.text_input("Município", st.session_state.city).strip()
-    typed_city  = format_city_name(typed_city )
+    city = st.sidebar.text_input("Município", st.session_state.city).strip()
+    city = format_city_name(city)
 
-    suggestions = cities_df['Município'].loc[cities_df['Município'].str.contains(typed_city, case=False, na=False)] if typed_city else cities_df['Município']
-    
-    # Dropdown dinâmico
-    selected_city = st.sidebar.selectbox("Selecione o município:", suggestions, key="city_dropdown", index=0 if typed_city else -1)
-
-    # Validar e armazenar
-    if selected_city:
-        st.session_state.city = selected_city
+    if city:
+        if city in cities_df['Município'].values:
+            st.session_state.city = city
+        else:
+            st.sidebar.warning("A cidade deve ser do Rio Grande do Sul. Verifique a ortografia e tente novamente.")
+            return None
 
     return st.session_state.city
 
