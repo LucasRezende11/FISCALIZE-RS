@@ -51,7 +51,7 @@ def municipal_revenues():
     page_title("Indicadores de Receitas Municipais")
 
     city = get_city(cities_df)
-    year = get_year(2004, 2024)
+    year = get_year(2003, 2024)
 
     if city:
         city = city.lower().strip().title()
