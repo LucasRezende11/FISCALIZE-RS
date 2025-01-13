@@ -186,6 +186,8 @@ def municipal_revenues():
                 </div>
             """, unsafe_allow_html=True)
 ###################################################################################################################################
+        transferencias_federais = revenue_city_all_years.groupby('Ano')['Transferências da União'].sum()
+        transferencias_estaduais = revenue_city_all_years.groupby('Ano')['Transferências do estado'].sum()
         max_y_value = (transferencias_federais.max() + transferencias_estaduais.max())*1.1
 
         fig4 = go.Figure()
