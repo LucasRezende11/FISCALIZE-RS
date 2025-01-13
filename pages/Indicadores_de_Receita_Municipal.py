@@ -160,11 +160,9 @@ def municipal_revenues():
 ###################################################################################################################################
         transferencias_federais = revenue_city_all_years.groupby('Ano')['Transferências da União'].sum()
         transferencias_estaduais = revenue_city_all_years.groupby('Ano')['Transferências do estado'].sum()
-
-        total_revenue_por_ano = revenue_city_all_years.groupby('Ano')['Receita Arrecadada'].sum()
         
-        participacao_transferencias_federais = (transferencias_federais / total_revenue_por_ano) * 100
-        participacao_transferencias_estaduais = (transferencias_estaduais / total_revenue_por_ano) * 100
+        participacao_transferencias_federais = (transferencias_federais / total_revenue) * 100
+        participacao_transferencias_estaduais = (transferencias_estaduais / total_revenue) * 100
 
         participacao_federal_formatada = f"{participacao_transferencias_federais.iloc[-1]:.2f}%"
         participacao_estadual_formatada = f"{participacao_transferencias_estaduais.iloc[-1]:.2f}%"
