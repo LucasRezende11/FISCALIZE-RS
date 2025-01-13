@@ -158,8 +158,9 @@ def municipal_revenues():
             xaxis_title= None, xaxis_title_font=dict(size=14),legend=dict(font=dict(size=12), title=None),dragmode=False, margin=dict(l=10, r=10, t=40, b=5))
             st.plotly_chart(fig3, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
-        transferencias_federais = revenue_city_all_years.groupby('Ano')['Transferências da União'].sum()
-        transferencias_estaduais = revenue_city_all_years.groupby('Ano')['Transferências do estado'].sum()
+        transferencias_federais = revenue_filtered.groupby('Ano')['Transferências da União'].sum()
+        transferencias_estaduais = revenue_filtered.groupby('Ano')['Transferências do estado'].sum()
+        total_revenue = revenue_filtered.groupby('Ano')['Receita Arrecadada'].sum()
         
         participacao_transferencias_federais = (transferencias_federais / total_revenue) * 100
         participacao_transferencias_estaduais = (transferencias_estaduais / total_revenue) * 100
