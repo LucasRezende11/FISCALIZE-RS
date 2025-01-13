@@ -119,7 +119,7 @@ def municipal_revenues():
                 <div style="background-color: #DDDDDD; padding: 10px; border-radius: 5px; text-align: center;margin-bottom: 10px">
                     <h3 style="margin: 0;">Receita de Impostos e Taxas</h3>
                     <p style="font-size: 24px; font-weight: bold;">{}</p>
-                    <p style="font-size: 20px;">Participação na Receita Total: <strong>{}</strong></p>
+                    <p style="font-size: 20px;">Participação na Receita Arrecadada: <strong>{}</strong></p>
                 </div>
             """.format(receita_impostos_formatada, participacao_receita_impostos_formatada), unsafe_allow_html=True)
 
@@ -128,7 +128,7 @@ def municipal_revenues():
                 <div style="background-color: #DDDDDD; padding: 10px; border-radius: 5px; text-align: center;">
                     <h3 style="margin: 0;">Receita de Transferências</h3>
                     <p style="font-size: 24px; font-weight: bold;">{}</p>
-                    <p style="font-size: 20px;">Participação na Receita Total: <strong>{}</strong> </p>
+                    <p style="font-size: 20px;">Participação na Receita Arrecadada: <strong>{}</strong> </p>
                 </div>
             """.format(receita_transferencias_formatada, participacao_receita_transferencias_formatada), unsafe_allow_html=True)
 
@@ -173,7 +173,7 @@ def municipal_revenues():
         with col8:
             st.markdown(f"""
                 <div style="background-color: #DDDDDD; padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 10px">
-                    <h3 style="margin: 0;"font-size: 24px;">Participação das Transferências Federais na Receita Total</h3>
+                    <h3 style="margin: 0;"font-size: 24px;">Participação das Transferências Federais na Receita Arrecadada</h3>
                     <p style="font-size: 20px;"><strong>{participacao_federal_formatada}</strong> <span style="font-size: 20px;">({year})</span></p>
                 </div>
             """, unsafe_allow_html=True)
@@ -181,7 +181,7 @@ def municipal_revenues():
         with col9:
             st.markdown(f"""
                 <div style="background-color: #DDDDDD; padding: 10px; border-radius: 5px; text-align: center;margin-bottom: 10px">
-                    <h3 style="margin: 0;">Participação das Transferências Estaduais na Receita Total</h3>
+                    <h3 style="margin: 0;">Participação das Transferências Estaduais na Receita Arrecadada</h3>
                     <p style="font-size: 20px;"><strong>{participacao_estadual_formatada}</strong> <span style="font-size: 20px;">({year})</span></p>
                 </div>
             """, unsafe_allow_html=True)
