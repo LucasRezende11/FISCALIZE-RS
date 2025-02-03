@@ -131,7 +131,7 @@ def economic_indicators():
         fig = go.Figure()
 
         for i, row in df_cidade.iterrows():
-            fig.add_trace(go.Bar(x=[row['Ano']], y=[0.6], name=row['Ano'], text=f"<b>{row['Partido']}</b>",textposition='inside', insidetextanchor='middle', hoverinfo="text", marker=dict(color='rgb(55, 83, 109)'),  customdata=[row['Candidato']],
+            fig.add_trace(go.Bar(x=[row['Ano']], y=[0.6], name=row['Ano'], text=f"<b>{row['Partido']}</b>",textposition='inside', insidetextanchor='middle', textfont=dict(size=16, color='white'), hoverinfo="text", marker=dict(color='rgb(55, 83, 109)'),  customdata=[row['Candidato']],
             hovertemplate=f"Candidato: {row['Candidato']}"))
 
         city = city.title()
