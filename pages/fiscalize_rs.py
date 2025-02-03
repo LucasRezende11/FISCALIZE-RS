@@ -58,8 +58,8 @@ def about_function():
         </p>
 
         <p style="font-size:18px;text-align: justify;background-color: #CCCCCC; padding: 10px;">
-        <strong>Formato dos dados:</strong> Em geral, os dados são apresentados em sua forma nominal, ou seja, sem considerar o efeito da inflação sobre os valores. Isso não acontece apenas na página de "Indicadores Econômicos", onde os dados estão deflacionados.<br>
-        A decisão para esse formato foi tomada levando em conta o caráter fiscalizatório propostosto para a ferramenta, então, dados nominais são mais fáceis de serem encontrados e checados nas referências utilizadas.
+        <strong>Formato dos dados:</strong> Em geral, os dados são apresentados em sua forma nominal, ou seja, sem considerar o efeito da inflação sobre os valores. Isso não acontece apenas na página de "Indicadores Econômicos", onde os dados estão deflacionados a partir do IPCA.<br>
+        A decisão para esse formato foi tomada levando em conta o caráter fiscalizatório propostosto para a ferramenta, de tal forma que, dados nominais são mais fáceis de serem encontrados e checados nas referências utilizadas.
         </p>
 
         <p style="font-size:18px;text-align: justify;">
