@@ -161,13 +161,13 @@ def economic_indicators():
             f"""
             <div style='text-align: center; font-size: 22px; margin-top: 10px;'>
                 O PIB deflacionado de {city} é: <strong>{GDP_value}</strong>
-                <span style="font-size: 16px;">({year})</span>
+                <span style="font-size: 16px;">(em {year})</span>
             </div>
             <hr style="border: 1px solid #ccc; width: 100%; margin: 0; margin-top: 10px; margin-bottom: 10px;">
 
             <div style='text-align: center; font-size: 22px; margin-top: 5px;'>
                 O município representa <strong>{ratio_state_gdp}%</strong> do PIB do RS
-                <span style="font-size: 16px;">({year})</span>
+                <span style="font-size: 16px;">(em {year})</span>
             </div>
             <hr style="border: 1px solid #ccc; width: 100%; margin: 0; margin-top: 10px; margin-bottom: 10px;">
             """,
