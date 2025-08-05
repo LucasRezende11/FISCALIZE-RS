@@ -205,7 +205,7 @@ def health_indicators():
 
         fig_asps.update_layout(title=dict(text=f"Índice ASPS - {format_city_name(city)} vs média dos municípios do RS", font=dict(size=20)),
             yaxis=dict(range=[0, max_asps], title='Índice ASPS (%)', titlefont=dict(size=14)), xaxis_title=None,
-            xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
+            xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig_asps, config={'scrollZoom': False, 'displayModeBar': False})
