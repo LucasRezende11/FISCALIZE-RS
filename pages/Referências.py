@@ -109,7 +109,7 @@ def references():
 
         <p style="font-size:17px;text-align: justify;">
         <strong>-Glossário de Indicadores (explicação dos indicadores de água, esgoto e resíduos sólidos):</strong> https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/saneamento/snis/produtos-do-snis/diagnosticos/Glossario_Indicadores_AE2022.pdf<br>
-        <strong>-Painel de Indicadores - SNIS (dados dos indicadores de água, esgoto e resíduos sólidos):</strong> http://appsnis.mdr.gov.br/indicadores-hmg/web/agua_esgoto/mapa-agua
+        <strong>-Painel de Indicadores - SNIS (dados dos indicadores de água, esgoto e resíduos sólidos):</strong> https://app-hmg.cidades.gov.br/indicadores-sinisa/web/agua_esgoto/mapa-agua
         </p>
         """, unsafe_allow_html=True)
 
