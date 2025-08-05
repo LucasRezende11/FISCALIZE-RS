@@ -75,7 +75,7 @@ def health_indicators():
         fig.update_layout(title=dict(text=f"Evolução do Gasto Total com Saúde - {city}", font=dict(size=20)),
             yaxis=dict(range=[0, max_health], title='Gasto com Saúde (R$)', titlefont=dict(size=14)),
             xaxis_title=None,xaxis_title_font=dict(size=14),yaxis_title='Gasto com Saúde (R$)',
-            dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
+            dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig, config={'scrollZoom': False, 'displayModeBar': False})
@@ -96,7 +96,7 @@ def health_indicators():
 
         fig.update_layout(title=dict(text=f"Participação do Gasto com Atenção Básica no Total de Saúde", font=dict(size=20)),
             yaxis=dict(range=[0, max_participation], title='Participação (%)', titlefont=dict(size=14)), xaxis_title=None,
-            xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
+            xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
         fig.update_traces(texttemplate='%{text:.2f}%', textposition='outside')
         st.plotly_chart(fig, config={'scrollZoom': False, 'displayModeBar': False})
@@ -127,7 +127,7 @@ def health_indicators():
 
         fig_polio.update_layout(title=dict(text="Comparação da Cobertura de Imunização contra Poliomielite", font=dict(size=20)),
             yaxis=dict(range=[0, max_polio], title='Cobertura (%)', titlefont=dict(size=14)), xaxis_title=None,
-            xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
+            xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig_polio, config={'scrollZoom': False, 'displayModeBar': False})
@@ -146,7 +146,7 @@ def health_indicators():
             title=f"Comparação da Cobertura de Imunização contra BCG - {place} vs Rio Grande do Sul", labels={'value': 'Cobertura (%)', 'Ano': 'Ano'}, markers=True, color_discrete_map={f'Cobertura {place}': '#ec8900', 'Cobertura Rio Grande do Sul': '#191e2c'} )
 
         fig_bcg.update_layout(title=dict(text="Comparação da Cobertura de Imunização BCG", font=dict(size=20)), yaxis=dict(range=[0, max_bcg], title='Cobertura (%)', titlefont=dict(size=14)),
-            xaxis_title=None, xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
+            xaxis_title=None, xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig_bcg, config={'scrollZoom': False, 'displayModeBar': False})
@@ -174,7 +174,7 @@ def health_indicators():
 
         fig_mortality.update_layout( title=dict(text="Evolução da Taxa de Mortalidade Infantil", font=dict(size=20)),
             yaxis=dict(range=[0, max_mortality], title='Taxa de Mortalidade (%)', titlefont=dict(size=14)), xaxis_title=None, xaxis_title_font=dict(size=14),
-            dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),margin=dict(l=10, r=10, t=40, b=5))
+            dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig_mortality, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
