@@ -95,7 +95,7 @@ def education_indicators():
         city = format_city_name(city)
         fig.update_layout(title=dict(text=f"Evolução do Gasto Total com Educação - {city}", font=dict(size=20)),
                 yaxis=dict(range=[0, max_gasto], title=f'Gasto com educação (R$)', titlefont=dict(size=14)),xaxis_title=None,
-                dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
+                dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -115,7 +115,7 @@ def education_indicators():
 
         fig.update_layout(title=dict(text="Participação do Gasto com Educação Fundamental no Total de Educação", font=dict(size=20)),
             yaxis=dict(range=[0, max_participation], title='Participação (%)', titlefont=dict(size=14)),xaxis_title=None,
-            dragmode=False,legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
+            dragmode=False,legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
         fig.update_traces(texttemplate='%{text:.2f}%', textposition='outside')
         st.plotly_chart(fig, config={'scrollZoom': False, 'displayModeBar': False})
@@ -143,7 +143,7 @@ def education_indicators():
             title=f"Comparação do IDEB - Anos Iniciais: {place} vs Rio Grande do Sul", labels={'IDEB': 'IDEB', 'Ano': 'Ano'}, markers=True, hover_data={'Local': False}, color_discrete_map={f'IDEB - Anos Iniciais - {place}' : '#ec8900', 'IDEB - Anos Iniciais - Rio Grande do Sul': '#191e2c'})
 
         fig_iniciais.update_layout(title=dict(text="Comparação do IDEB - Anos Iniciais", font=dict(size=20)),yaxis=dict(range=[0, max_ideb], title='IDEB', titlefont=dict(size=14)),
-            xaxis_title=None, dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
+            xaxis_title=None, dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig_iniciais, config={'scrollZoom': False, 'displayModeBar': False})
 
@@ -162,7 +162,7 @@ def education_indicators():
 
         fig_finais.update_layout(title=dict(text="Comparação do IDEB - Anos Finais", font=dict(size=20)),
             yaxis=dict(range=[0, max_ideb2],title='IDEB', titlefont=dict(size=14)), xaxis_title=None,dragmode=False,
-            legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
+            legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig_finais, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -192,7 +192,7 @@ def education_indicators():
         fig_mde.add_hline(y=25, line=dict(color='red', dash='dash', width=2), annotation_text="Mínimo 25%", annotation_position="bottom right")
 
         fig_mde.update_layout(title=dict(text=f"Índice MDE - {format_city_name(city)} vs média dos municípios do RS", font=dict(size=20)), yaxis=dict(range=[0, max_mde], title='Índice MDE (%)', titlefont=dict(size=14)),
-            xaxis_title=None, xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'),
+            xaxis_title=None, xaxis_title_font=dict(size=14), dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig_mde, config={'scrollZoom': False, 'displayModeBar': False})
