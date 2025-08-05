@@ -106,7 +106,7 @@ def municipal_revenues():
 
         city = format_city_name(city)
         fig.update_layout(title=dict(text=f"Evolução da Receita Prevista e Arrecadada - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_revenue_value], title='Receita (R$)', titlefont=dict(size=14)),
-        xaxis_title= None, xaxis_title_font=dict(size=14), yaxis_title='Receita (R$)', dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2,x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
+        xaxis_title= None, xaxis_title_font=dict(size=14), yaxis_title='Receita (R$)', dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2,x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -147,7 +147,7 @@ def municipal_revenues():
                         labels={'Receita de impostos e taxas': 'Receita (R$)', 'Ano': 'Ano'},  markers=True, color_discrete_sequence=['#191e2c'])
 
             fig2.update_layout(title=dict(text=f"Receita de Impostos e Taxas - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_impostos], title='Receita (R$)', titlefont=dict(size=14)),
-            xaxis_title= None, xaxis_title_font=dict(size=14),legend=dict(font=dict(size=12), title=None),dragmode=False, margin=dict(l=10, r=10, t=40, b=5))
+            xaxis_title= None, xaxis_title_font=dict(size=14),legend=dict(font=dict(size=14), title=None),dragmode=False, margin=dict(l=10, r=10, t=40, b=5))
             st.plotly_chart(fig2, config={'scrollZoom': False, 'displayModeBar': False})
 
         with col7:
@@ -155,7 +155,7 @@ def municipal_revenues():
                         labels={'Receita de transferências': 'Receita (R$)', 'Ano': 'Ano'}, markers=True, color_discrete_sequence=['#ec8900'])
 
             fig3.update_layout(title=dict(text=f"Receita de Transferências - {city}", font=dict(size=20)),yaxis=dict(range=[0, max_transferencias], title='Receita (R$)', titlefont=dict(size=14)),
-            xaxis_title= None, xaxis_title_font=dict(size=14),legend=dict(font=dict(size=12), title=None),dragmode=False, margin=dict(l=10, r=10, t=40, b=5))
+            xaxis_title= None, xaxis_title_font=dict(size=14),legend=dict(font=dict(size=14), title=None),dragmode=False, margin=dict(l=10, r=10, t=40, b=5))
             st.plotly_chart(fig3, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
         transferencias_federais = revenue_filtered.groupby('Ano')['Transferências da União'].sum()
@@ -195,7 +195,7 @@ def municipal_revenues():
         fig4.add_trace(go.Bar(x=transferencias_estaduais.index, y=transferencias_estaduais, name='Transferências dos Estados e do Distrito Federal e de suas Entidades', marker_color='#ec8900'))
 
         fig4.update_layout(barmode='stack',title=dict(text=f"Evolução das Transferências - {city}",font=dict(size=20)),xaxis_title= None,xaxis=dict(title_font=dict(size=14)),
-        yaxis_title='Valor (R$)', yaxis=dict(range=[0, max_y_value], title_font=dict(size=14)),legend=dict(title=None, font=dict(size=12),orientation="h", y=-0.2,x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
+        yaxis_title='Valor (R$)', yaxis=dict(range=[0, max_y_value], title_font=dict(size=14)),legend=dict(title=None, font=dict(size=14),orientation="h", y=-0.2,x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
 
         st.plotly_chart(fig4, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -251,7 +251,7 @@ def municipal_revenues():
 
             fig5.update_layout(barmode='stack', title=dict(text=f"Composição Percentual da Receita Arrecadada - {city}", font=dict(size=20)),
                 xaxis_title=None, yaxis_title='Percentual (%)', yaxis=dict(range=[0, 100], title_font=dict(size=14)),
-                xaxis=dict(type='category', title_font=dict(size=14)), legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=12)),
+                xaxis=dict(type='category', title_font=dict(size=14)), legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=14)),
                 margin=dict(l=10, r=10, t=40, b=5))
 
             return fig5
