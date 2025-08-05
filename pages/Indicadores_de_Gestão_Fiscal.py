@@ -46,7 +46,7 @@ def fiscal_management_indicators():
                               labels={'x': 'Ano', 'y': 'RCL (R$)'}, markers=True, color_discrete_sequence=['#191e2c'])
 
             fig_rcl.update_layout(title=dict(text="Evolução da Receita Corrente Líquida", font=dict(size=20)), yaxis=dict(range=[0, None], title='RCL (R$)', titlefont=dict(size=14)),
-            xaxis_title=None, dragmode=False, legend=dict(title=None, font=dict(size=12), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
+            xaxis_title=None, dragmode=False, legend=dict(title=None, font=dict(size=14), orientation="h", y=-0.2, x=0.5, xanchor='center'), margin=dict(l=10, r=10, t=40, b=5))
 
             st.markdown("<div style='margin-top: 10px;'></div>", unsafe_allow_html=True)
             st.plotly_chart(fig_rcl, config={'scrollZoom': False, 'displayModeBar': False})
@@ -66,7 +66,7 @@ def fiscal_management_indicators():
                 fig_debt = px.line(x=rcl_years, y=debt_values,title=f"Evolução da Dívida Consolidada Líquida - {city}", labels={'x': 'Ano', 'y': 'Dívida Consolidada Líquida (R$)'}, markers=True, color_discrete_sequence=['#191e2c'])
 
                 fig_debt.update_layout(title=dict(text=f"Evolução da Dívida Consolidada Líquida - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_rcl], title='Dívida Consolidada Líquida (R$)', titlefont=dict(size=14)),
-                xaxis_title=None, xaxis=dict(type='category', titlefont=dict(size=14)), dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=12)),
+                xaxis_title=None, xaxis=dict(type='category', titlefont=dict(size=14)), dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=14)),
                 margin=dict(l=10, r=10, t=40, b=5))
 
                 st.plotly_chart(fig_debt, config={'scrollZoom': False, 'displayModeBar': False})
@@ -97,7 +97,7 @@ def fiscal_management_indicators():
                 max_debt = max(debt_percent)*1.3
                 fig_debt_percent.update_layout(barmode='stack', title=dict(text=f"Percentual da Dívida Consolidada Líquida em relação à RCL - {city}", font=dict(size=20)),
                 yaxis=dict(range=[0, max_debt], title='Percentual (%)', titlefont=dict(size=14)),
-                legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=12)), margin=dict(l=10, r=10, t=40, b=10))
+                legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=14)), margin=dict(l=10, r=10, t=40, b=10))
 
                 st.plotly_chart(fig_debt_percent, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -139,7 +139,7 @@ def fiscal_management_indicators():
 
                     fig_personal_expenses.update_layout(title=dict(text=f"Evolução das Despesas com Pessoal - {city}", font=dict(size=20)), yaxis=dict(range=[0, max_personnel], title='Despesas com Pessoal (R$)',
                         titlefont=dict(size=14)), xaxis_title=None, xaxis=dict(type='category', titlefont=dict(size=14)), dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5,
-                        xanchor='center',title=None,font=dict(size=12)), margin=dict(l=10, r=10, t=40, b=5))
+                        xanchor='center',title=None,font=dict(size=14)), margin=dict(l=10, r=10, t=40, b=5))
 
                     st.plotly_chart(fig_personal_expenses, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -183,7 +183,7 @@ def fiscal_management_indicators():
                         fig_expenses_percent.update_layout( barmode='stack',title=dict(text=f"Percentual das Despesas com Pessoal em relação à RCL - {city}", font=dict(size=20)),
                                     yaxis=dict(range=[0, max_expenses], title='Percentual (%)', titlefont=dict(size=14)), xaxis_title=None,
                                     legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None,
-                                    font=dict(size=12)), margin=dict(l=10, r=10, t=40, b=10))
+                                    font=dict(size=14)), margin=dict(l=10, r=10, t=40, b=10))
 
                         st.plotly_chart(fig_expenses_percent, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -237,7 +237,7 @@ def fiscal_management_indicators():
 
                         fig_credit_evolution.update_layout(title=dict(text=f"Evolução das Operações de Crédito - {city}", font=dict(size=20)),
                         yaxis=dict(range=[0, max_credit], title='Operações de Crédito (R$)', titlefont=dict(size=14)), xaxis=dict(type='category', titlefont=dict(size=14)),
-                        dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=12)), margin=dict(l=10, r=10, t=40, b=5))
+                        dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=14)), margin=dict(l=10, r=10, t=40, b=5))
 
                         st.plotly_chart(fig_credit_evolution, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -270,7 +270,7 @@ def fiscal_management_indicators():
                         max_credit = max(credit_percent)*1.3
                         fig_credit_percent.update_layout(title=dict(text=f"Percentual das Operações de Crédito em relação à RCL - {city}",font=dict(size=20)),
                         yaxis=dict(range=[0, max_credit], title='Percentual (%)',titlefont=dict(size=14)),legend=dict(orientation="h",
-                        y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=12)), margin=dict(l=10, r=10, t=40, b=10))
+                        y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=14)), margin=dict(l=10, r=10, t=40, b=10))
 
                         st.plotly_chart(fig_credit_percent, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -325,7 +325,7 @@ def fiscal_management_indicators():
 
                     fig_remains_evolution.update_layout(title=dict(text=f"Evolução de Restos a Pagar - {city}", font=dict(size=20)),
                     yaxis=dict(range=[0, None], title='Valor de Restos a Pagar (R$)', titlefont=dict(size=14)),
-                    dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=12)), margin=dict(l=10, r=10, t=40, b=5))
+                    dragmode=False, legend=dict(orientation="h", y=-0.2, x=0.5, xanchor='center', title=None, font=dict(size=14)), margin=dict(l=10, r=10, t=40, b=5))
 
                     st.plotly_chart(fig_remains_evolution, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
@@ -336,7 +336,7 @@ def fiscal_management_indicators():
                     fig_remains_bar.update_traces(hovertemplate='%{y:.2f}%<br>Ano: %{x}')
 
                     fig_remains_bar.update_layout(title=dict(text=f"Insuficiência Financeira - {city}", font=dict(size=20)),xaxis_title=None, yaxis_title='Valor de Insuficiência Financeira (R$)',
-                    yaxis=dict(range=[0, None], titlefont=dict(size=14)), dragmode=False,legend=dict(orientation="h", y=-0.2,x=0.5, xanchor='center', title= None, font=dict(size=12)), margin=dict(l=10, r=10, t=40, b=5))
+                    yaxis=dict(range=[0, None], titlefont=dict(size=14)), dragmode=False,legend=dict(orientation="h", y=-0.2,x=0.5, xanchor='center', title= None, font=dict(size=14)), margin=dict(l=10, r=10, t=40, b=5))
 
                     st.plotly_chart(fig_remains_bar, config={'scrollZoom': False, 'displayModeBar': False})
 ###################################################################################################################################
